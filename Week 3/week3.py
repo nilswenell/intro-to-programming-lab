@@ -1,6 +1,11 @@
 #nils wenell
 
 '''
+
+# section statements fun problem
+
+
+
 income = int(input('income: '))
 status = input('married? (y/n): ')
 owed = 0
@@ -37,6 +42,9 @@ else:
 print(my_var)
 
 
+
+# question 8
+
 num1 = int(input('number: '))
 num2 = int(input('another: '))
 num3 = int(input('one more: '))
@@ -64,8 +72,9 @@ else:
         my_var -= 2
 print(my_var)
 
-'''
 
+
+# question 17
 
 player_1 = input("player 1 choice: ")
 player_2 = input("player 2 choice: ")
@@ -93,3 +102,9 @@ else:
     else:
         winner = "nobody"
 print(f'{winner} wins!')
+
+'''
+
+
+
+    
