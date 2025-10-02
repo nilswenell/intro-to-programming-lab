@@ -55,8 +55,8 @@ workdays = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday')
 
 #write a function that takes a string as an 
 #argument and returns a list of all the words in that string.
-
-
+myword = 'peter piper picked a peck of pickled peppers.'
+'''
 #how i did it (not fully correct)
 def listmaker(string):
     list = []
@@ -68,7 +68,7 @@ def listmaker(string):
             list.append(string[startpoint:endpoint])
             startpoint = endpoint
     print(list)        
-listmaker('peter piper picked a peck of pickled peppers.')
+listmaker(myword)
 
 
 #how he did it
@@ -84,4 +84,51 @@ def stringtolist(word):
     words.append(built_word)
     return words
 
-print(stringtolist('peter piper picked a peck of pickled peppers.'))
+print(stringtolist(myword))
+
+'''
+
+#write a function that takes a string as an argument, and returns a list 
+#containing all of the words that have at least two vowels.
+
+def twovowels(word):
+    words=[]
+    builtword=''
+    vowelcount = 0
+    for letter in word:
+
+        if letter == ' ':
+            if vowelcount >= 2:
+                words.append(builtword)
+            builtword=''
+            vowelcount=0
+        else:
+            builtword += letter
+            if letter in 'aeiou':
+            # ^^^ same as 
+            #if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u' 
+                vowelcount+=1
+        #debug tool 
+        #print(letter, vowelcount, builtword)
+    if vowelcount >= 2:
+        words.append(builtword)        
+    return words
+print(twovowels(myword))
+
+
+
+def uniquewords(word):
+    words = []
+    built_word= ''
+    for letter in word:
+        if letter == ' ':
+            if built_word not in words:
+                words.append(built_word)
+            built_word=''
+        else:
+            built_word += letter
+    if built_word not in words:
+        words.append(built_word)
+    return words
+
+print(uniquewords('peter peter piper picked peter a peck of peter'))
