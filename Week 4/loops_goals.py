@@ -66,10 +66,13 @@ for num in range(50, 517+1):
 print(total)
 '''
 #question 6
+'''
 number = 0
 sum = 0
 while number >=0:
     sum+=number
     number = int(input('number: '))
-    
 print(sum)
+'''
+
+#question 7

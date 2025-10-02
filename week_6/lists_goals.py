@@ -14,34 +14,6 @@ myfunc(myword)
 
 
 
-#question 8
-'''
-def pool_time(user_grade, user_time):
-    if user_grade == 'k':
-        user_grade = 0
-    else: 
-        user_grade = int(user_grade)
-    time_output = ''
-    if user_time == 'morning':
-        if user_grade <= 3:
-            time_output = 9
-        elif user_grade <= 8:
-            time_output = 10
-        else:
-            time_output = 11
-    else:
-        if user_grade <= 3:
-            time_output = 1
-        elif user_grade <= 8:
-            time_output = 2
-        else:
-            time_output = 3
-    print(f' time: {time_output}')
-
-grade = input('grade: ')
-time = input('morning or afternoon? ')
-pool_time(grade,time)
-'''
 
 #question 11
 def add_lists(lyst1,lyst2):

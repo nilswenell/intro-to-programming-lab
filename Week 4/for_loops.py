@@ -39,10 +39,3 @@ print(var[2:8])
 for item in var:
     print(item)
 '''
-
-larger = int(input('larger number: '))
-smaller = int(input('smaller number: '))
-number = 1
-while (larger/(number*2)) > smaller:
-    number+=1
-print(f'{larger} can be halved {number - 1} times before it isnt greater than {smaller}')
