@@ -31,6 +31,7 @@ for word in word_list:
 '''
 
 
+
 #definitions!
 def vowel_counter(passed_word):
     count = 0
@@ -52,10 +53,3 @@ vowel_counter(word1)
 vowel_counter(word2)
 vowel_counter(word3)
 
-
-
-while user_word !='0':
-    if user_word == '0':
-        break
-    else:
-        vowel_counter(user_word)
