@@ -16,16 +16,18 @@ person_dict = {'emma':71,'jack':45,'olivia':82,'liam':39}
 
 def find_oldest(people):
     oldest = 0
-
+    oldest_person = ''
     #find the bigest age
     for person in people:
         if people[person] > oldest:
             oldest = people[person]
+            oldest_person = person
+    return oldest_person
 
     #find the person that goes with that age
-    for person in people:
-        if oldest == people[person]:
-            return person
+    #for person in people:
+     #   if oldest == people[person]:
+      #      return person
     
 
 #print(find_oldest(person_dict))
@@ -60,8 +62,36 @@ receipt['Cookie'] = 3
 total = 0
 for item in receipt:
     total +=receipt[item]
-print(total)
+#print(total)
 
 
 
 
+#question 18
+
+
+
+
+mylist = [3,3,3,4,5,6,1,1,1,1,2,2,0,5,5,5,5]
+
+def majority_element(nums):
+    num_dict = {}
+    #make dictionary with number, and how many times it was in the list
+    for number in nums:
+        if number not in num_dict:
+            num_dict[number]=1
+        else:
+            num_dict[number]+=1
+    
+    biggest = 0
+    biggest_item = -1
+    #find the biggest value (number of how many times)
+    for item in num_dict:
+        if num_dict[item] > biggest:
+            biggest = num_dict[item]
+            biggest_item = item
+    return biggest_item
+
+    
+        
+print(majority_element(mylist))
