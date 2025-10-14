@@ -66,6 +66,25 @@ for item in receipt:
 
 
 
+#question  11
+
+animals = ['cat', 'dog', 'cat', 'cow', 'cow', 'cow']
+
+def count_repetitions(elements):
+    repetitions = {}
+    for item in elements:
+        if item not in repetitions:
+            repetitions[item]=1
+        else:
+            repetitions[item]+=1
+    return repetitions
+
+#print(count_repetitions(animals))
+
+    
+
+
+
 
 #question 18
 
@@ -94,4 +113,22 @@ def majority_element(nums):
 
     
         
-print(majority_element(mylist))
+#print(majority_element(mylist))
+
+
+
+
+
+
+
+
+
+#challenge
+
+namenumber = ''
+challengedict ={}
+while namenumber != 'quit':
+    namenumber = input('name and number: ')
+    words = namenumber.split(' ')
+    challengedict[words[0]]=words[1]
+    print(challengedict)
