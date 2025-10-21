@@ -1,4 +1,4 @@
-#write a functino that contains a dictionary containing 
+#write a function that contains a dictionary containing 
 #how many times each letter appears
 
 my_word = 'peter piper picked a peck of pickled peppers'
@@ -21,8 +21,12 @@ def letter_counter(word):
 
     return letter_dictionary
 
+#print dictionary
 print(letter_counter(my_word))
 
+#print key and value row by row
 letter_dict = letter_counter(my_word)
 for letter in letter_dict:
     print(letter, letter_dict[letter])
+
+

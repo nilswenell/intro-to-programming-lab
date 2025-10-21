@@ -123,8 +123,8 @@ def majority_element(nums):
 
 
 
-#challenge
-
+#challenge (incomplete)
+'''
 namenumber = ''
 challengedict ={}
 while namenumber != 'quit':
@@ -132,3 +132,4 @@ while namenumber != 'quit':
     words = namenumber.split(' ')
     challengedict[words[0]]=words[1]
     print(challengedict)
+'''

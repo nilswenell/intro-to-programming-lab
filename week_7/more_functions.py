@@ -45,6 +45,8 @@ print(y)
 import more_dictionaries
 #help(more_dictionaries)
 
+
+#this makes silly stuff an alias for math
 import math as silly_stuff
 
 print(silly_stuff.pi)

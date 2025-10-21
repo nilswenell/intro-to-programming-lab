@@ -41,21 +41,3 @@ def string_to_dictionary(word):
 
 print(string_to_dictionary(mywords))
 
-'''
-#another variation
-def uniquewords(word):
-    words = []
-    built_word= ''
-    for letter in word:
-        if letter == ' ':
-            if built_word not in words:
-                words.append(built_word)
-            built_word=''
-        else:
-            built_word += letter
-    if built_word not in words:
-        words.append(built_word)
-    return words
-
-print(uniquewords('peter peter piper picked peter a peck of peter'))
-'''
