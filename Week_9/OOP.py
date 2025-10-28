@@ -74,9 +74,20 @@ class Planet:
     def set_name(self,new_name):
         self.name = new_name
 
+    
+    def __str__(self):
+        msg = ''
+        msg += f'Hello {self.get_name()}. How are you?'
+        return msg
+    
+
 
 planet1 = Planet("bagel planet", 500, 600, 1200)
 
+print(planet1)
+
+
+#changing planet attribute (name)
 print(planet1.get_name())
 planet1.set_name('donut planet')
 print(planet1.get_name())
