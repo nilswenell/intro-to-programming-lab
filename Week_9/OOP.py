@@ -84,13 +84,13 @@ class Planet:
 
 planet1 = Planet("bagel planet", 500, 600, 1200)
 
-print(planet1)
+#print(planet1)
 
 
 #changing planet attribute (name)
-print(planet1.get_name())
-planet1.set_name('donut planet')
-print(planet1.get_name())
+#print(planet1.get_name())
+#planet1.set_name('donut planet')
+#print(planet1.get_name())
 
 
 
@@ -136,5 +136,26 @@ dog1 = Dog('bagel', 15, 'beagle', 'red')
 
 
     
-#accessor methods
+
     
+
+
+class Star:
+    def __init__(self, _name):
+        self.name = _name
+    
+    def get_name(self):
+        return self.name
+    
+    def set_name(self,new_name):
+        self.name = new_name
+
+    def __str__(self):
+        msg = ''
+        msg += f"I am {self.get_name()}, I'm a star!!"
+        return msg
+
+
+awesome_star = Star('Awesome Star')
+
+print(awesome_star)
