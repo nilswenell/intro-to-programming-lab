@@ -158,4 +158,34 @@ class Star:
 
 awesome_star = Star('Awesome Star')
 
-print(awesome_star)
+#print(awesome_star)
+
+#planetary system
+
+class PlanetarySystem:
+    def __init__(self,_star):
+        self.star = _star
+        self.planets = []
+
+    def add_planet(self,_planet):
+        self.planets.append(_planet)
+    
+    def show_planets(self):
+        for planet in self.planets:
+            print(planet.get_name())
+    
+sun = Star("Sun")
+ss = PlanetarySystem(sun)
+
+p = Planet("mercury",1,2,3)
+ss.add_planet(p)
+
+p = Planet('venus',0,9,8)
+ss.add_planet(p)
+
+p = Planet('erf',5,4,3)
+ss.add_planet(p)
+
+
+ss.show_planets()
+
