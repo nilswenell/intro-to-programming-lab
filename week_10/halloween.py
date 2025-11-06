@@ -58,3 +58,40 @@ bag_of_candies = [candy1]
 
 for candy in bag_of_candies:
     print(candy1)
+
+
+
+
+class Product:
+    def __init__(self,_name,_price,_quantity):
+        self.name=_name
+        self.price=_price
+        self.quantity=_quantity
+
+
+class Employee:
+    def __init__(self):
+        self.name = ''
+        self.title = ''
+        self.salary = 0
+
+    def get_name(self):
+        return self.name
+    def set_name(self,name):
+        self.name = name
+    
+    def get_title(self):
+        return self.title
+    def set_title(self,title):
+        self.title = title
+
+    def get_salary(self):
+        return self.salary
+    def set_salary(self,salary):
+        self.salary = salary
+
+    def greeting(self):
+        return f"Hello, my name is {self.name}. I'm the {self.title}."
+    
+    def request_raise(self,new_amount):
+        return f"I'm currently making {self.salary}. I'd like a new salary of {new_amount}."
