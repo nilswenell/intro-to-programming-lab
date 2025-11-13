@@ -3,6 +3,7 @@
 #can deposit money, withdraw money
 
 class BankAccount:
+    
     rate = 0.02
     def __init__(self,_owner,_balance = 0):
         self.owner = _owner
@@ -50,8 +51,10 @@ class BankAccount:
 
 
 nils_acc = BankAccount('Nils',200)
-nils_acc.give_interest
 print(nils_acc)
+nils_acc.give_interest()
+print(nils_acc)
+
 '''
 nils_acc.deposit(100)
 nils_acc.withdraw(200)
