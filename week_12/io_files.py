@@ -35,9 +35,22 @@ print(f' average: {total/count}')
 
 new_file = open('family.txt','w')
 
-new_file.write('Nils')
-new_file.write('Anders')
-new_file.write('Beth')
-new_file.write('Anthony')
+new_file.write('Name,age,thing\n')
+new_file.write('Nils,19,editing\n')
+new_file.write('Anders,21,cars\n')
+new_file.write('Beth,49,geology\n')
+new_file.write('Anthony,56,water stuff\n')
 
 new_file.close()
+
+my_file = open('family.txt','r')
+data = my_file.readlines()
+total_age = 0
+how_many = 0
+for line in data[1:]:
+    line_data = line.split(',')
+    age = line_data[1]
+    total_age+=int(age)
+    how_many+=1
+    print(age)
+print(f'avg age: {total_age/how_many}')

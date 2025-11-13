@@ -1,1 +1,5 @@
-NilsAndersBethAnthony
+Name,age,thing
+Nils,19,editing
+Anders,21,cars
+Beth,49,geology
+Anthony,56,water stuff
