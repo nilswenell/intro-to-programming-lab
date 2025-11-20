@@ -1,3 +1,33 @@
+#question 8
+
+class Rectangle:
+
+    def __init__(self,_width,_height):
+        self.width = _width
+        self.height = _height
+    
+    def get_width(self):
+        return self.width
+    def get_height(self):
+        return self.height
+    
+    def get_area(self):
+        return self.height * self.width
+    
+    def __mul__(self,number):
+        print(f'width: {self.get_width() * number}, height: {self.get_height() * number}')
+
+    def __str__(self):
+        return f'width: {self.get_width()}, height: {self.get_height()}'
+
+rect1 = Rectangle(4,5)
+print(rect1)
+rect1.__mul__(3)
+
+
+
+
+
 #question 9
 
 class Playlist:
