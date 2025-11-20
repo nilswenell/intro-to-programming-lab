@@ -1,7 +1,47 @@
 #question 9
 
+class Playlist:
+    def __init__(self,_name,_songs = []):
+        self.name = _name
+        self.songs = _songs
+
+    def add_song(self,song):
+        self.songs.append(song)
+        
+    def get_name(self):
+        return self.name
+        
+    def __str__(self):
+            return f'{self.get_name()} playlist: {self.songs}'
+            
+
+    def __add__(self,playlist_2):
+        new_playlist = []
+        for song in self.songs:
+            new_playlist.append(song)
+        for song in playlist_2.songs:
+            new_playlist.append(song)
+        return Playlist(self.get_name() + playlist_2.get_name(),new_playlist)
+            
+        
+            
+playlist_1 = Playlist('my_playlist',['song1','song2','song3'])
+playlist_2 = Playlist('my_second_playlist',['song4','song5','song6'])
+
+playlist_3 = Playlist('my_third_playlist',playlist_1.__add__(playlist_2))
+
+print(playlist_1)
+print(playlist_2)
+print(playlist_3)
+
+
+
+
+
+#question 10
+
 class ShoppingCart:
-    def __init__(self,_items : dict):
+    def __init__(self,_items = {}):
         self.items = _items
 
     def add_item(self,item):
