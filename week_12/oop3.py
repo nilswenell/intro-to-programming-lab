@@ -15,14 +15,14 @@ class Rectangle:
         return self.height * self.width
     
     def __mul__(self,number):
-        print(f'width: {self.get_width() * number}, height: {self.get_height() * number}')
+        return f'width: {self.get_width() * number}, height: {self.get_height() * number}'
 
     def __str__(self):
         return f'width: {self.get_width()}, height: {self.get_height()}'
 
 rect1 = Rectangle(4,5)
 print(rect1)
-rect1.__mul__(3)
+print(rect1.__mul__(3))
 
 
 
@@ -80,7 +80,7 @@ class ShoppingCart:
         else:
             self.items[item]=1
 
-  
+    '''
     def __add__(self,cart2 : dict):
         new_dict = {}
         if len(self.items)>=len(cart2):
@@ -97,7 +97,18 @@ class ShoppingCart:
                 else:
                     new_dict[key]=cart2[key]
             return new_dict
+            '''
+    def __add__(self,other):
+        combined = ShoppingCart()
+        for item,qty in self.items.items():
+            combined.items[item] = qty
 
+        for item,qty in other.items.items():
+            if item in combined.items:
+                combined.items[item]+=qty
+            else:
+                combined.items[item]=qty
+        return combined
         
         
 
@@ -113,6 +124,9 @@ class ShoppingCart:
 cart1 = ShoppingCart({'carrot':1,'apple':2})    
 cart1.add_item('celery')
 cart2 = ShoppingCart({'carrot':3,'apple':2,'celery':1,'ice cream':1})   
-new_cart = ShoppingCart(cart1.__add__(cart2.items))
+#new_cart = ShoppingCart(cart1.__add__(cart2.items))
+new_cart = cart1 + cart2
 cart1.display_items()
+cart2.display_items()
+
 new_cart.display_items()
